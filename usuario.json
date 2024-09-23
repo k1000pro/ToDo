@@ -1,0 +1,53 @@
+{
+  "usuarios": [
+    {
+      "id": "iglhvbmb",
+      "nombre_usuario": "asda",
+      "email": "kamilo@yahoo.com",
+      "contrasenia": "$2a$10$oDCpZFl2NxGPPPIPUH8/MOyeuex8IeDhCpvw.BeMMQD/xSUtmoPvC",
+      "categorias": [
+        {
+          "id": "nzz1cv88",
+          "nombre": "Estudio",
+          "color": "hsl(191, 100%, 85%)"
+        },
+        {
+          "id": "cxj5djcs",
+          "nombre": "Trabajo",
+          "color": "hsl(187, 100%, 85%)"
+        },
+        {
+          "id": "27l5p6kr",
+          "nombre": "Ocio",
+          "color": "hsl(201, 100%, 85%)"
+        }
+      ],
+      "tareas": [
+        {
+          "id": "t0fmxvbq",
+          "descripcion": "Estudiar matematicas",
+          "fechaVencimiento": "2024-09-25",
+          "categoria": "Estudio",
+          "estado": "pendientes",
+          "createdAt": "2024-09-23T21:43:04.962Z"
+        },
+        {
+          "id": "ma9g9isl",
+          "descripcion": "Mandar informe",
+          "fechaVencimiento": "2024-09-26",
+          "categoria": "Trabajo",
+          "estado": "pendientes",
+          "createdAt": "2024-09-23T21:43:24.825Z"
+        },
+        {
+          "id": "yvl9nwoz",
+          "descripcion": "Jugar baseball",
+          "fechaVencimiento": "2024-09-25",
+          "categoria": "Ocio",
+          "estado": "pendientes",
+          "createdAt": "2024-09-23T21:43:35.530Z"
+        }
+      ]
+    }
+  ]
+}
