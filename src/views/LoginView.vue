@@ -72,7 +72,7 @@ const validarContrasenia = () => {
   return true;
 };
 
-
+//manerjar iniciar sesion
 const handleLogin = async () => {
   const emailValido = validarEmail();
   const contraseniaValida = validarContrasenia();

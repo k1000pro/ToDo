@@ -126,23 +126,26 @@ const filtros = ref([
   { nombre: "Pendientes", color: "#007bff" },
   { nombre: "Completadas", color: "#28a745" },
 ]);
-
+//generar id aleatorio para las categorias
 const generarIdAleatorio = () => {
   return Math.random().toString(36).substr(2, 8);
 };
+//generar color aleatorio para las categorias
 const getRandomPastelColor = () => {
   const hue = Math.floor(Math.random() * 360);
   const pastel = `hsl(${hue}, 100%, 85%)`;
   return pastel;
 };
+//mostrar notificaciones
 function mostrarToast(mensaje, tipo) {
   toastMensaje.value = mensaje;
   toastTipo.value = tipo;
-  toastVisible.value = false; // Asegúrate de que el toast se oculta antes de volver a mostrarlo
+  toastVisible.value = false; 
   setTimeout(() => {
     toastVisible.value = true;
-  }, 0); // Usa un pequeño retraso para asegurar que el cambio de estado se procesa correctamente
+  }, 0); 
 }
+//manejar el estado del sidebar abierto o cerado
 const toggleSidebar = () => {
   sidebarAbierto.value = !sidebarAbierto.value;
 };
@@ -192,7 +195,7 @@ const seleccionarFiltro = (filtro) => {
   categoriaSeleccionada.value = "Todas"; // Reset category when a filter is selected
   emit("filtro-seleccionado", filtro);
 };
-
+//saber el tamanio de la pantalla para manejar el sidebar
 const handleRedimensionar = () => {
   pantallaGrande.value = window.innerWidth >= 1000;
 };

@@ -28,7 +28,7 @@
           "descripcion": "Estudiar matematicas",
           "fechaVencimiento": "2024-09-25",
           "categoria": "Estudio",
-          "estado": "pendientes",
+          "estado": "completadas",
           "createdAt": "2024-09-23T21:43:04.962Z"
         },
         {
@@ -44,7 +44,7 @@
           "descripcion": "Jugar baseball",
           "fechaVencimiento": "2024-09-25",
           "categoria": "Ocio",
-          "estado": "pendientes",
+          "estado": "completadas",
           "createdAt": "2024-09-23T21:43:35.530Z"
         }
       ]

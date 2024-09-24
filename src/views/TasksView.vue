@@ -209,14 +209,14 @@ const descripcionError = ref("");
 const fechaError = ref("");
 const categoriaError = ref("");
 const idTareaAEditar=ref("")
-
+//generar id aleatorio para las tareas
 const generarIdAleatorio = () => {
   return Math.random().toString(36).substr(2, 8);
 };
 const validarFormTarea = (descripcion,fechaVencimiento,categoria) => {
   let isValid = true;
 
-  // Validar descripción
+
   if (descripcion.length < 3) {
     descripcionError.value = "La descripción debe tener al menos 3 caracteres.";
     isValid = false;
@@ -224,7 +224,7 @@ const validarFormTarea = (descripcion,fechaVencimiento,categoria) => {
     descripcionError.value = "";
   }
 
-  // Validar fecha
+
   if (!fechaVencimiento) {
     fechaError.value = "La fecha de vencimiento es requerida.";
     isValid = false;
@@ -232,7 +232,7 @@ const validarFormTarea = (descripcion,fechaVencimiento,categoria) => {
     fechaError.value = "";
   }
 
-  // Validar categoría
+
   if (categoria === "Seleccionar categoria") {
     categoriaError.value = "Debes seleccionar una categoría.";
     isValid = false;
@@ -243,13 +243,13 @@ const validarFormTarea = (descripcion,fechaVencimiento,categoria) => {
   return isValid;
 };
 
-
+//mostrar notificaciones
 function mostrarToast(mensaje, tipo) {
   toastMensaje.value = mensaje;
   toastTipo.value = tipo;
-  toastVisible.value = false; // Ocultar el toast antes de mostrar uno nuevo
+  toastVisible.value = false; 
   setTimeout(() => {
-    toastVisible.value = true; // Mostrar el toast con un pequeño retraso
+    toastVisible.value = true; 
   }, 0);
 }
 
@@ -266,8 +266,8 @@ const agregarTarea = () => {
       createdAt: new Date().toISOString(),
     };
     todoStore.agregarTarea(nuevaTarea);
-    mostrarModalAgregarTarea.value = false; // Cerrar modal
-    // Limpiar campos
+    mostrarModalAgregarTarea.value = false; 
+
     descripcionNuevaTarea.value = "";
     fechaVencimiento.value = "";
     categoriaNuevaTarea.value = "Seleccionar categoria";
@@ -287,8 +287,8 @@ const editarTarea = () => {
     };
     todoStore.actualizarTarea(idTareaAEditar.value,tareaEditada);
     idTareaAEditar.value=""
-    mostrarModalEditarTarea.value = false; // Cerrar modal
-    // Limpiar campos
+    mostrarModalEditarTarea.value = false;
+
     descripcionEditarTarea.value = "";
     fechaVencimientoEditarTarea.value = "";
     categoriaEditarTarea.value = "Seleccionar categoria";

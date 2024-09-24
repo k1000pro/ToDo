@@ -31,18 +31,22 @@ const props = defineProps({
     type: String,
     required: true
   },
+  //array de objetos
   items: {
     type: Array,
     required: true
   },
+  //objeto seleccionado
   selectedItem: {
     type: String,
     default: "Todos"
   },
+  //mostrar icono a la par del item
   showButton: {
     type: Boolean,
     default: false
   },
+  //clase del icono 
   buttonIcon: {
     type: String,
     default: 'fas fa-info-circle' 

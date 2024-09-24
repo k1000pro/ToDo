@@ -9,6 +9,7 @@ export const useUserStore = defineStore("user", {
   }),
   
   actions: {
+    //verificar si hay sesion iniciada
     async verificarSesion() {
   
       const email = localStorage.getItem('email');

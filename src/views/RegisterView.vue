@@ -51,7 +51,7 @@
       <div class="login-opciones">
         <p>o</p>
 
-        <a href="#" @click.prevent="signUp">Ya tengo una cuenta</a>
+        <a href="#" @click.prevent="redirigirAIniciarSesion">Ya tengo una cuenta</a>
       </div>
     </div>
   </div>
@@ -120,14 +120,14 @@ const validarVerificarContrasenia = () => {
   return true;
 };
 
-
+//manejar el registro
 const handleRegister = async () => {
   const nombreValido = validarNombre();
   const emailValido = validarEmail();
   const contraseniaValida = validarContrasenia();
   const verificarContraseniaValida = validarVerificarContrasenia();
 
-
+//generar id aleatorio para el usuario
   const generarIdAleatorio = () => {
     return Math.random().toString(36).substr(2, 8);
   };
@@ -138,6 +138,7 @@ const handleRegister = async () => {
     contraseniaValida &&
     verificarContraseniaValida
   ) {
+    //hashear la contrasenia
     const nivelSeguridad=bcrypt.genSaltSync(10);
     const hashedContrasenia=bcrypt.hashSync(contrasenia.value,nivelSeguridad) 
     const usuario = {
@@ -161,7 +162,7 @@ const handleRegister = async () => {
 };
 
 
-const signUp = () => {
+const redirigirAIniciarSesion = () => {
   router.push("/");
 };
 onMounted(async () => {
